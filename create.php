@@ -23,17 +23,21 @@
 			</form>
 		<?php
 			if(isset($_POST['submit'])){
-				$name=$_POST['name'];
-				$surname=$_POST['surname'];
-				$phone=$_POST['phone'];
+				if( !empty($_POST['name']) && !empty($_POST['surname']) && !empty($_POST['phone']) ){
+					$name=$_POST['name'];
+					$surname=$_POST['surname'];
+					$phone=$_POST['phone'];
 
-				$query="INSERT INTO user (name,surname,phone) VALUES('$name','$surname','$phone')";
-				$sendQuery=mysqli_query($db_con,$query);
-				
-				if($sendQuery){
-					header('Location:create.php');
+					$query="INSERT INTO user (name,surname,phone) VALUES('$name','$surname','$phone')";
+					$sendQuery=mysqli_query($db_con,$query);
+
+					if($sendQuery){
+						header('Location:create.php');
+					}else{
+						echo "User has not been added to the table";}
 				}else{
-					echo "User has not been added to the table";}
+					echo "Fill all the forms!";
+				}
 			}
 		?>
 	</body>

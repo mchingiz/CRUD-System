@@ -7,7 +7,7 @@
 	</head>
 	<body>
 		<p>Are you sure you want to delete this user?</p>
-		<form action="list.php" method="post">
+		<form action="" method="post">
 			<input class="btn btn-success" type="submit" name="yes" value="YES">
 			<input class="btn btn-danger" type="submit" name="no" value="NO">
 		</form>

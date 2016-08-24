@@ -37,13 +37,13 @@
 						}
 						$id=$row['id']; ?>
 						<td>
-							<a class='btn btn-default' href='read.php?id=<?php $id ?>'>Read</a>
+							<a class='btn btn-default' href='read.php?id=<?= $id ?>'>Read</a>
 						</td>
 						<td>
-							<a class='btn btn-success' href='update.php?id=<?php $id ?>'>Update</a>
+							<a class='btn btn-success' href='update.php?id=<?= $id ?>'>Update</a>
 						</td>
 						<td>
-							<a class='btn btn-danger' href='delete.php?id=<?php $id ?>'>Delete</a>
+							<a class='btn btn-danger' href='delete.php?id=<?= $id ?>'>Delete</a>
 						</td>
 					<?php }
 				}else{
